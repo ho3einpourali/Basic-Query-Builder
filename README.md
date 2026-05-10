@@ -29,7 +29,7 @@ console.log(result.sql);
 
 console.log(result.params); 
 // Output: ['active']
-
+```
 ---
 
 ## Project Structure
