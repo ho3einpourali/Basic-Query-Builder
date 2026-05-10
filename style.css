@@ -1,0 +1,170 @@
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
+  --border: #334155;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.panel-header {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.col {
+  flex: 1;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.output-area {
+  background: var(--bg-color);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  min-height: 100px;
+  color: var(--success);
+}
+
+.output-area.update {
+  color: var(--warning);
+}
+.output-area.delete {
+  color: var(--danger);
+}
+
+.params-area {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-family: monospace;
+  color: var(--text-secondary);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+}
