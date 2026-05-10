@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Query Builder | CRUD Showcase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Basic Query Builder</h1>
+      <p class="subtitle">CRUD | Zero-Dependency</p>
+    </header>
+
+    <div class="container">
+      <div class="panel">
+        <div class="panel-header">Configuration</div>
+
+        <div class="form-group">
+          <label>Query Type</label>
+          <select id="queryType">
+            <option value="select">SELECT</option>
+            <option value="update">UPDATE</option>
+            <option value="delete">DELETE</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Database Dialect</label>
+          <select id="dialect">
+            <option value="mysql">MySQL</option>
+            <option value="postgresql">PostgreSQL</option>
+            <option value="sqlite">SQLite</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Table Name</label>
+          <input type="text" id="table" placeholder="users" value="users" />
+        </div>
+
+        <div id="selectFields">
+          <div class="form-group">
+            <label>Select Columns</label>
+            <input
+              type="text"
+              id="columns"
+              placeholder="id, name, email (or * for all)"
+              value="id, name, email"
+            />
+          </div>
+        </div>
+
+        <div id="updateFields" style="display: none">
+          <div class="form-group">
+            <label>Set Values (JSON Format)</label>
+            <input
+              type="text"
+              id="updateValues"
+              placeholder='{"status": "active", "role": "admin"}'
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Where Condition (Use ? for parameters)</label>
+          <input type="text" id="where" placeholder="id = ? AND status = ?" />
+        </div>
+
+        <div class="row">
+          <div class="col form-group">
+            <label>Param 1</label>
+            <input type="text" id="param1" placeholder="1" />
+          </div>
+          <div class="col form-group">
+            <label>Param 2</label>
+            <input type="text" id="param2" placeholder="'active'" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col form-group">
+            <label>Order By</label>
+            <input type="text" id="orderBy" placeholder="created_at" />
+          </div>
+          <div class="col form-group">
+            <label>Limit</label>
+            <input type="number" id="limit" placeholder="10" />
+          </div>
+        </div>
+
+        <button id="buildBtn">Generate Query</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">Generated SQL</div>
+        <div class="output-area" id="sqlOutput">SELECT * FROM users</div>
+
+        <div class="params-area" id="paramsOutput">
+          <strong>Parameters:</strong><br />
+          []
+        </div>
+      </div>
+    </div>
+
+    <script src="QueryBuilder.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
