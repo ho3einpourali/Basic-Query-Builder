@@ -1,14 +1,14 @@
-# 🚀 Basic Query Builder
+#  Basic Query Builder
 
 A **SQL** Query Builder written in modern Vanilla JavaScript.
 
 ##  Features
 
-- ** SQL Injection Protection**: Uses parameter binding (`?` placeholders) instead of string concatenation.
-- ** Fluent Interface**: Chain methods for readable, maintainable code (`db.from('users').select('id').where(...)`).
-- ** Multi-Dialect Support**: Automatically adapts syntax for MySQL, PostgreSQL, and SQLite.
-- ** AST-Based Architecture**: Internally builds an Abstract Syntax Tree before compilation, allowing for easy extension.
-- ** Zero Dependencies**: Works in any modern browser or Node.js environment without `npm install`.
+-  SQL Injection Protection**: Uses parameter binding (`?` placeholders) instead of string concatenation.
+-  Fluent Interface**: Chain methods for readable, maintainable code (`db.from('users').select('id').where(...)`).
+-  Multi-Dialect Support**: Automatically adapts syntax for MySQL, PostgreSQL, and SQLite.
+-  AST-Based Architecture**: Internally builds an Abstract Syntax Tree before compilation, allowing for easy extension.
+-  Zero Dependencies**: Works in any modern browser or Node.js environment without `npm install`.
 
 ---
 
