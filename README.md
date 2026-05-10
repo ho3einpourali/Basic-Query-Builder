@@ -10,6 +10,8 @@ A **SQL** Query Builder written in modern Vanilla JavaScript.
 - **🏗️ AST-Based Architecture**: Internally builds an Abstract Syntax Tree before compilation, allowing for easy extension.
 - **⚡ Zero Dependencies**: Works in any modern browser or Node.js environment without `npm install`.
 
+---
+
 ## 🛠️ Usage Examples
 
 ### Basic Select
@@ -27,3 +29,14 @@ console.log(result.sql);
 
 console.log(result.params); 
 // Output: ['active']
+
+---
+
+## Project Structure
+```txt
+flexilayout-studio/
+├── index.html
+├── styles.css
+├── script.js
+├── QueryBuilder.js
+└── README.md
