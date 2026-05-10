@@ -1,8 +1,8 @@
-#  Basic Query Builder
+# Basic Query Builder
 
 A **SQL** Query Builder written in modern Vanilla JavaScript.
 
-##  Features
+## Features
 
 -  SQL Injection Protection**: Uses parameter binding (`?` placeholders) instead of string concatenation.
 -  Fluent Interface**: Chain methods for readable, maintainable code (`db.from('users').select('id').where(...)`).
@@ -12,7 +12,7 @@ A **SQL** Query Builder written in modern Vanilla JavaScript.
 
 ---
 
-## 🛠️ Usage Examples
+## Usage Examples
 
 ### Basic Select
 ```javascript
